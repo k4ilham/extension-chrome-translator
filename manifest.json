@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ID ↔ EN Translator",
+  "version": "1.0.0",
+  "description": "Terjemahkan Bahasa Indonesia ↔ Inggris lewat popup dan klik kanan.",
+  "action": {
+    "default_title": "Translate Indonesia ↔ English",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://libretranslate.com/*",
+    "https://translate.argosopentech.com/*",
+    "https://translate.astian.org/*",
+    "https://libretranslate.de/*",
+    "https://api.mymemory.translated.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

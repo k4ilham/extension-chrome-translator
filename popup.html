@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID ↔ EN Translator</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Translate Indonesia ↔ English</h1>
+      <label for="direction">Arah terjemahan</label>
+      <select id="direction">
+        <option value="id-en">Indonesia → English</option>
+        <option value="en-id">English → Indonesia</option>
+      </select>
+      <label for="endpoint">Endpoint</label>
+      <select id="endpoint">
+        <option value="auto">Auto (multi-endpoint)</option>
+        <option value="libretranslate.com">libretranslate.com</option>
+        <option value="translate.astian.org">translate.astian.org</option>
+        <option value="libretranslate.de">libretranslate.de</option>
+        <option value="argosopentech">translate.argosopentech.com</option>
+      </select>
+      <label for="inputText">Teks</label>
+      <textarea id="inputText" rows="5" placeholder="Masukkan teks di sini..."></textarea>
+      <button id="translateBtn">Translate</button>
+      <div id="status" class="status"></div>
+      <label for="resultText">Hasil</label>
+      <textarea id="resultText" rows="5" readonly></textarea>
+      <div class="actions">
+        <button id="copyBtn">Copy</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+      <p class="hint">Tips: Anda juga bisa klik kanan pada teks yang dipilih di halaman untuk menerjemahkan langsung.</p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
