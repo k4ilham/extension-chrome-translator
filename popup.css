@@ -42,3 +42,7 @@ button:hover { background: #eef1f4; }
 .status { font-size: 12px; color: #666; margin-top: 6px; min-height: 16px; }
 
 .hint { font-size: 11px; color: #666; margin-top: 8px; }
+
+.meta { font-size: 11px; margin-top: 8px; }
+.meta a { color: #0969da; text-decoration: none; }
+.meta a:hover { text-decoration: underline; }
